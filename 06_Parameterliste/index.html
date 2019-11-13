@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 6 Parameterliste</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    test(10, 20, 30, 40, 50, 60, 70);
+
+    function test(par1, par2) {
+        document.write("Parameter 1 hat den Wert: " + par1 + "<br>");
+        document.write("Parameter 2 hat den Wert: " + par2 + "<br><br>");
+
+        for (var i = 2; i < arguments.length; i++) {
+            document.write("Zusätzliche Parameter " + (i-1) + " hat den Wert: " + arguments[i] + "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>
+
