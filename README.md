@@ -13,7 +13,7 @@
 
 * Beispiel 05 - Parameterleiste: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP05_Parameterleiste/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP05_Parameterleiste/)
 
-* Beispiel 06 - Parameterleiste: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP06_Arrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP06_Arrays/)
+* Beispiel 06 - Arrays: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP06_Arrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP06_Arrays/)
 
 #### Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate)
