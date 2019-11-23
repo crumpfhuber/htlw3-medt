@@ -1,8 +1,8 @@
 # Medientechnik 3
 
-### JavaScript
+## JavaScript
 
-#### Beispiele
+### Beispiele
 * Beispiel 01 - Hello World: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP01_HelloWorld/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP01_HelloWorld/)
 
 * Beispiel 02 - Externe Datei: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP02_ExterneDatei/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP02_ExterneDatei/)
@@ -22,7 +22,7 @@
 * Beispiel 09 - Assoziative Arrays: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP09_AssoziativeArrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP09_AssoziativeArrays/)
 
 
-#### Übungen
+### Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate)
 
 * Übung 02 - Zeichenfolge: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE02_Zeichenfolge/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE02_Zeichenfolge/)
