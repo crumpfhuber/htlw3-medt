@@ -15,6 +15,8 @@
 
 * Beispiel 06 - Arrays: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP06_Arrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP06_Arrays/)
 
+* Beispiel 07 - Arrays forEach: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP07_ForEachArrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP07_ForEachArrays/)
+
 #### Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate)
 
