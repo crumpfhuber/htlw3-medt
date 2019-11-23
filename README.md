@@ -2,7 +2,7 @@
 
 ### JavaScript
 
-##### Übungen
+#### Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate/)
 
 * Übung 02 - Zeichenfolge: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE02_Zeichenfolge) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE02_Zeichenfolge/)
