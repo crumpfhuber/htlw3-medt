@@ -1,13 +1,5 @@
 # Medientechnik 3
 
-Table of Contents
-=================
-
-* [JavaScript](#javascript)
-   * [Beispiele](#beispiele)
-   * [Übungen](#übungen)
-
-
 ## JavaScript
 
 ### Beispiele
