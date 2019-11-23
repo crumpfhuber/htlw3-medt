@@ -11,7 +11,7 @@
 
 * Beispiel 04 - Typenkonvertierung: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP04_Typenkonvertierung/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP04_Typenkonvertierung/)
 
-* Beispiel 05 - Parameterleiste: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP05_Parameterleiste/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP05_Parameterleiste/)
+* Beispiel 05 - Parameterliste: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP05_Parameterliste/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP05_Parameterliste/)
 
 * Beispiel 06 - Arrays: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP06_Arrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP06_Arrays/)
 
