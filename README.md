@@ -15,9 +15,9 @@
 
 
 #### Übungen
-* Beispiel 01 - Hello World: [Source Code]("https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP01_Hello World/") - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP01_Hello World/)
+* Beispiel 01 - Hello World: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP01_HelloWorld/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP01_HelloWorld/)
 
-* Beispiel 02 - Externe Datei: [Source Code]("https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP02_Externe Datei/") - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP02_Externe Datei/)
+* Beispiel 02 - Externe Datei: [Source Code]("https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP02_ExterneDatei/") - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP02_ExterneDatei/)
 
 * Beispiel 03 - Variablen: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP03_Variablen/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP03_Variablen/)
 
