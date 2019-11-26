@@ -7,34 +7,34 @@
 <body>
 
 <script type="application/javascript">
-    let Mitarbeiter = new Array();
+    let mitarbeiter = new Array();
 
-    Mitarbeiter[0] = new Object();
-    Mitarbeiter[0]["Name"] = "Müller";
-    Mitarbeiter[0]["Vorname"] = "Max";
-    Mitarbeiter[0]["Alter"] = 24;
-    Mitarbeiter[0]["Wohnort"] = "München";
+    mitarbeiter[0] = new Object();
+    mitarbeiter[0]["Name"] = "Müller";
+    mitarbeiter[0]["Vorname"] = "Max";
+    mitarbeiter[0]["Alter"] = 24;
+    mitarbeiter[0]["Wohnort"] = "München";
 
-    Mitarbeiter[1] = new Object();
-    Mitarbeiter[1]["Name"] = "Doll";
-    Mitarbeiter[1]["Vorname"] = "Dieter";
-    Mitarbeiter[1]["Alter"] = 25;
-    Mitarbeiter[1]["Wohnort"] = "Dresden";
+    mitarbeiter[1] = new Object();
+    mitarbeiter[1]["Name"] = "Doll";
+    mitarbeiter[1]["Vorname"] = "Dieter";
+    mitarbeiter[1]["Alter"] = 25;
+    mitarbeiter[1]["Wohnort"] = "Dresden";
 
-    Mitarbeiter[2] = new Object();
-    Mitarbeiter[2]["Name"] = "Schulze";
-    Mitarbeiter[2]["Vorname"] = "Bettina";
-    Mitarbeiter[2]["Alter"] = 26;
-    Mitarbeiter[2]["Wohnort"] = "Berlin";
+    mitarbeiter[2] = new Object();
+    mitarbeiter[2]["Name"] = "Schulze";
+    mitarbeiter[2]["Vorname"] = "Bettina";
+    mitarbeiter[2]["Alter"] = 26;
+    mitarbeiter[2]["Wohnort"] = "Berlin";
 
-    for (var obj of Mitarbeiter) {
+    for (var obj of mitarbeiter) {
         for (key in obj) {
             document.write(key, ": ", obj[key], "<br>");
         }
     }
 
     document.write("<br>", "Kürzere Version:", "<br>");
-    let Mitarbeiter1 = [
+    let mitarbeiter1 = [
         {
             Name: "Müller",
             Vorname: "Max",
@@ -55,7 +55,7 @@
         }
     ];
 
-    for (var obj of Mitarbeiter1) {
+    for (var obj of mitarbeiter1) {
         for (key in obj) {
             document.write(key, ": ", obj[key], "<br>");
         }
