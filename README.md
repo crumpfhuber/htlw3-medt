@@ -21,6 +21,7 @@
 
 * Beispiel 09 - Assoziative Arrays: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP09_AssoziativeArrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP09_AssoziativeArrays/)
 
+* Beispiel 10 - Mehrdimensionale assoziative Arrays: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP10_MehrdimensionaleAssoziativeArrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP10_MehrdimensionaleAssoziativeArrays/)
 
 ### Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate)
