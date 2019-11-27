@@ -49,7 +49,7 @@ berechneKaufpreis(1.1);
 lebensmittel.forEach(function (element, index) {
     document.write("<div class='item'>");
     document.write("<table>");
-    document.write("<thead><tr><td class='tablehead'>Element</td><td class='tablehead'>Key</td></tr></thead>")
+    document.write("<thead><tr><td class='tablehead'>Element</td><td class='tablehead'>Key</td></tr></thead>");
     for (key in element) document.write("<tr>", "<td>", key, "</td>", "<td>", element[key], "</td>", "</tr>");
     document.write("</table>");
     document.write("<br><br>");
