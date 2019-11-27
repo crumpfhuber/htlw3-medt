@@ -33,3 +33,6 @@
 * Übung 04 - Lebensmittel (mehrdimensionales assoziatives Array): [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE04_Lebensmittel/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE04_Lebensmittel/)
 
 * Übung 05 - Arraymethoden: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE05_Arraymethoden/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE05_Arraymethoden/)
+
+### Praktische Leistungsfeststellung
+* PLF 01 - (Übung 01-05 | Beispiel 01-10): [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PLF01/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/PLF01/)
