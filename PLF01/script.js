@@ -1,5 +1,3 @@
-/* Rumpfhuber */
-
 var clothes = [
     {
       name: "Pullover",
