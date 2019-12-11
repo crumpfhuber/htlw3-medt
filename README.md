@@ -36,5 +36,9 @@
 
 * Übung 05 - Arraymethoden: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE05_Arraymethoden/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE05_Arraymethoden/)
 
+* Übung 06 - Zeitsteuerung: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE06_Zeitsteuerung/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE06_Zeitsteuerung/)
+
+* Übung 07 - DOM: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE07_DOM/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE07_DOM/)
+
 ### Praktische Leistungsfeststellung
 * PLF 01 - Übung 01-05 / Beispiel 01-10: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PLF01/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/PLF01/)
