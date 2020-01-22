@@ -40,5 +40,7 @@
 
 * Übung 07 - DOM: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE07_DOM/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE07_DOM/)
 
+* Übung 08 - Boxenstapel: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE08_Boxenstapel/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE08_Boxenstapel/)
+
 ### Praktische Leistungsfeststellung
 * PLF 01 - Übung 01-05 / Beispiel 01-10: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PLF01/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/PLF01/)
