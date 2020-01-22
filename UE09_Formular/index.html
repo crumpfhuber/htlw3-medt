@@ -1,0 +1,44 @@
+<!-- Clemens Rumpfhuber 3AHIT -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 9 Formular</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="application/javascript" src="script.js"></script>
+</head>
+<body>
+
+<h1>Übung 9 Formular</h1>
+
+<div style="display: flex;">
+    <div style="order: 1;">
+        <h5>Kleinste Zahl:</h5>
+        <input id="number_a" class="superinput" type="number" required value="1">
+    </div>
+    <div style="order: 2;">
+        <h5>Größte Zahl:</h5>
+        <input id="number_b" class="superinput" type="number" required value="5">
+    </div>
+    <div style="order: 3;">
+        <h5>Anzahl der Zahlen:</h5>
+        <input id="amount" class="superinput" type="number" required value="10">
+    </div>
+    <div style="order: 4; padding-top: 30px;">
+        <button class="myButton" style="" onclick="generateNumbers()">Erzeugen</button><br><br>
+        <button class="myButton" style="" onclick="clearField()">Löschen</button>
+    </div>
+</div>
+
+<div id="output-field">
+    <h4>Erzeugte Zahlen:</h4>
+    <div id="output"></div>
+</div>
+
+<footer>
+    &copy; Clemens Rumpfhuber 3AHIT
+</footer>
+
+</body>
+</html>
