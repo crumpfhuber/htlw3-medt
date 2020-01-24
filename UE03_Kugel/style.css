@@ -5,19 +5,6 @@
 
 html {
     height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    background-repeat: no-repeat;
-    background-attachment: fixed !important;
-
-    background: -webkit-linear-gradient(120deg, #3498db, #8e44ad);
-    background: -moz-linear-gradient(120deg, #3498db, #8e44ad);
-    background: -ms-linear-gradient(120deg, #3498db, #8e44ad);
-    background: -o-linear-gradient(120deg, #3498db, #8e44ad);
-    background: linear-gradient(120deg, #3498db, #8e44ad);
 }
 
 body {
@@ -33,18 +20,14 @@ h1, h2, h3, h4, h5 {
     font-family: 'Roboto Mono', monospace !important;
 }
 
+h1 {
+    text-align: center;
+    border: 2px solid black;
+}
+
 footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
     height: 30px;
     width: 100%;
-    padding: 20px;
-
-    background: -webkit-linear-gradient(120deg, #3498db, #8e44ad);
-    background: -moz-linear-gradient(120deg, #3498db, #8e44ad);
-    background: -ms-linear-gradient(120deg, #3498db, #8e44ad);
-    background: -o-linear-gradient(120deg, #3498db, #8e44ad);
-    background: linear-gradient(120deg, #3498db, #8e44ad);
-    border-top: 1px solid white;
+    margin-top: 50px;
+    padding: 20px 20px 20px -20px;
 }
