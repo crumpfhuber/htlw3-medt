@@ -25,6 +25,10 @@
 
 * Beispiel 11 - DOM Zugriff: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP11_DOMZugriff/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP11_DOMZugriff/)
 
+* Beispiel 12 - Formular: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP12_Formular/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP12_Formular/)
+
+* Beispiel 13 - Formular 2: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP13_Formular2/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP13_Formular2/)
+
 ### Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate)
 
