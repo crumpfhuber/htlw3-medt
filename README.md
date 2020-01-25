@@ -1,8 +1,6 @@
-# Medientechnik 3
+# JavaScript
 
-## JavaScript
-
-### Beispiele
+## Beispiele
 * Beispiel 01 - Hello World: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP01_HelloWorld/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP01_HelloWorld/)
 
 * Beispiel 02 - Externe Datei: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP02_ExterneDatei/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP02_ExterneDatei/)
@@ -29,7 +27,7 @@
 
 * Beispiel 13 - Formular 2: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/BSP13_Formular2/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/BSP13_Formular2/)
 
-### Übungen
+## Übungen
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE01_Quadrate/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE01_Quadrate)
 
 * Übung 02 - Zeichenfolge: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE02_Zeichenfolge/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE02_Zeichenfolge/)
@@ -48,5 +46,5 @@
 
 * Übung 09 - Formular: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE09_Formular/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE09_Formular/)
 
-### Praktische Leistungsfeststellungen
+## Praktische Leistungsfeststellungen
 * PLF 01 - Übung 01-05 / Beispiel 01-10: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PLF01/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/PLF01/)
