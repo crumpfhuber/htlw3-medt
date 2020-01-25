@@ -1,3 +1,5 @@
+# Inhaltsverzeichnis
+
 ## JavaScript
 
 ### Beispiele
