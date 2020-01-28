@@ -5,7 +5,7 @@ function generateNumbers() {
     let b = parseInt(document.getElementById("number_b").value);
     let c = parseInt(document.getElementById("amount").value);
     let txt = "";
-    for (let i = 0; i < c; i++) txt += a + Math.round(b*Math.random()) + (i+1 === c ? "" : ", ");
+    for (let i = 0; i < c; i++) txt += a + Math.round((b-1)*Math.random()) + (i+1 === c ? "" : ", ");
     document.getElementById("output").innerText = txt;
 }
 
