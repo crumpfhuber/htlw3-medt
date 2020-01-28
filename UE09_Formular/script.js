@@ -6,9 +6,9 @@ function generateNumbers() {
     let c = parseInt(document.getElementById("amount").value);
     let txt = "";
     for (let i = 0; i < c; i++) txt += a + Math.round((b-1)*Math.random()) + (i+1 === c ? "" : ", ");
-    document.getElementById("output").innerText = txt;
+    document.getElementById('output').innerText = txt;
 }
 
 function clearField() {
-    document.getElementById('output').innerText = ''
+    document.getElementById('output').innerText = '';
 }
