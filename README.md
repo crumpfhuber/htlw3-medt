@@ -49,4 +49,4 @@
 * Übung 09 - Formular: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/UE09_Formular/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/UE09_Formular/)
 
 ### Praktische Leistungsfeststellungen
-* PLF 01 - Übung 01-05 / Beispiel 01-10: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PLF01/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/PLF01/)
+* PLF 01 - Übung 01-05 / Beispiel 01-10: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PLF01_Arrays/) - [Preview](https://crumpfhuber.github.io/htlw3-medt/PLF01_Arrays/)
