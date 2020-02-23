@@ -7,9 +7,9 @@ pipeline:
     include: "*"
     key: 
       from_secret: deploy_key
-    script: 
-      - "cd ~/packages"
-      - "md5sum -c app.jar.md5"
     source: ./
     target: 
       from_secret: deploy_target
+    when: 
+      branch: master
+      event: push
