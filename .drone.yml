@@ -12,3 +12,7 @@ steps:
       source: release.tar.gz
       target: sync_target
       username: sync_user
+
+trigger:
+  branch:
+  - master
