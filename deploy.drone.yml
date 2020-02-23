@@ -24,6 +24,3 @@ steps:
       event: 
         - push
         - pull-request
-trigger: 
-  branch: 
-    - master
