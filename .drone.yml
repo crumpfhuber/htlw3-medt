@@ -1,9 +1,14 @@
-name: scp files
-  image: appleboy/drone-scp
-  settings:
-    host: sync_server
-    username: sync_user
-    password: sync_password
-    port: sync_port
-    target: sync_target
-    source: release.tar.gz
+--- 
+kind: pipeline
+name: default
+steps: 
+  - 
+    image: appleboy/drone-scp
+    name: scp
+    settings: 
+      host: sync_server
+      password: sync_password
+      port: sync_port
+      source: release.tar.gz
+      target: sync_target
+      username: sync_user
