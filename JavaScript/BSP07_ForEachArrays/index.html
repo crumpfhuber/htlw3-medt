@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beispiel 07 - ForEach Arrays</title>
+</head>
+<body>
+
+<script type="application/javascript">
+    var toys = [
+        ["Teddy",18.90,200],
+        ["Roller",24.50, 240],
+        ,                       // leeres Element
+        ["Puppe",19.00, 220],
+        ["Puppenhaus",54.00]
+    ];
+
+    for (var i = 0; i < toys.length; i++) {
+        document.write ("for: " + toys[i], "<br>");
+    }
+
+    document.write ("<br>");
+
+    toys.forEach(function(toy, index) {
+        document.write ("foreach: " + toy, "<br>");
+    });
+</script>
+
+</body>
+</html>
+

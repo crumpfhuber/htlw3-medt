@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beispiel 09 - Assoziative Arrays</title>
+</head>
+<body>
+
+<script type="application/javascript">
+    var buch = Array();
+    buch['titel'] = "Einführung in JavaScript";
+    buch['isbn'] = "123-456-7889";
+    buch['autor'] = "Neumann";
+    buch['pubdate'] = "15.8.2018";
+
+    for (var key in buch) {
+        document.write("Schlüssel ", key, " mit Wert ", buch[key], "<br>");
+    }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beispiel 10 - Mehrdimensionale assoziative Arrays</title>
+</head>
+<body>
+
+<script type="application/javascript">
+    let mitarbeiter = new Array();
+
+    mitarbeiter[0] = new Object();
+    mitarbeiter[0]["Name"] = "Müller";
+    mitarbeiter[0]["Vorname"] = "Max";
+    mitarbeiter[0]["Alter"] = 24;
+    mitarbeiter[0]["Wohnort"] = "München";
+
+    mitarbeiter[1] = new Object();
+    mitarbeiter[1]["Name"] = "Doll";
+    mitarbeiter[1]["Vorname"] = "Dieter";
+    mitarbeiter[1]["Alter"] = 25;
+    mitarbeiter[1]["Wohnort"] = "Dresden";
+
+    mitarbeiter[2] = new Object();
+    mitarbeiter[2]["Name"] = "Schulze";
+    mitarbeiter[2]["Vorname"] = "Bettina";
+    mitarbeiter[2]["Alter"] = 26;
+    mitarbeiter[2]["Wohnort"] = "Berlin";
+
+    for (var obj of mitarbeiter) {
+        for (key in obj) {
+            document.write(key, ": ", obj[key], "<br>");
+        }
+    }
+
+    document.write("<br>", "Kürzere Version:", "<br>");
+    let mitarbeiter1 = [
+        {
+            Name: "Müller",
+            Vorname: "Max",
+            Alter: 24,
+            Wohnort: "München"
+        },
+        {
+            Name: "Doll",
+            Vorname: "Dieter",
+            Alter: 25,
+            Wohnort: "Dresden"
+        },
+        {
+            Name: "Schulze",
+            Vorname: "Bettina",
+            Alter: 26,
+            Wohnort: "Berlin"
+        }
+    ];
+
+    for (var obj of mitarbeiter1) {
+        for (key in obj) {
+            document.write(key, ": ", obj[key], "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>
+

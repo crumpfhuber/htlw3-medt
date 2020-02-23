@@ -1,0 +1,66 @@
+/* Clemens Rumpfhuber 3AHIT */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 2vw;
+    padding-bottom: 2vw;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+h1 {
+    text-align: center;
+    border: 2px solid black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    order: 1;
+    width: 25%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    text-align: left;
+    width: 200px;
+    height: 25px !important;
+    padding: 1%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.tablehead {
+    font-family: 'Roboto Mono', monospace !important;
+    font-weight: bold !important;
+    font-size: 16pt;
+    width: 50%;
+    text-align: center;
+}
+
+footer {
+    height: 30px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 20px 20px -20px;
+}
