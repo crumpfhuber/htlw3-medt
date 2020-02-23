@@ -19,6 +19,11 @@ steps:
         from_secret: deploy_target
       user: 
         from_secret: deploy_user
+    when: 
+      branch: master
+      event: 
+        - push
+        - pull-request
 trigger: 
   branch: 
     - master
