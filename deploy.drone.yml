@@ -9,7 +9,7 @@ steps:
       hosts: 
         - web.clemawe.com
       include: 
-        - /
+        - "*"
       exclude: [ ".gitignore", ".drone.yml", "_config.yml" ]
       key: 
         from_secret: deploy_key
