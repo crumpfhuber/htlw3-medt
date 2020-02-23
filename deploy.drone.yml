@@ -2,6 +2,10 @@
 kind: pipeline
 name: deploy
 
+platform:
+  os: linux
+  arch: arm
+
 steps:
 - name: scp files
   image: appleboy/drone-scp
