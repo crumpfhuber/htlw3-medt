@@ -1,26 +1,15 @@
 --- 
-kind: pipeline
-name: deploy
-steps: 
-  - 
+pipeline: 
+  deploy: 
+    hosts: 
+      - web.clemawe.com
     image: drillster/drone-rsync
-    name: deploy
-    settings: 
-      hosts: 
-        - web.clemawe.com
-      include: 
-        - "*"
-      exclude: [ ".gitignore", ".drone.yml", "_config.yml" ]
-      key: 
-        from_secret: deploy_key
-      port: 
-        from_secret: deploy_port
-      target: 
-        from_secret: deploy_target
-      user: 
-        from_secret: deploy_user
-    when: 
-      branch: master
-      event: 
-        - push
-        - pull-request
+    include: "*"
+    key: 
+      from_secret: deploy_key
+    script: 
+      - "cd ~/packages"
+      - "md5sum -c app.jar.md5"
+    source: ./
+    target: 
+      from_secret: deploy_target
