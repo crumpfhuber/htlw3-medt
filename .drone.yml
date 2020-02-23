@@ -1,22 +1,24 @@
 --- 
 kind: pipeline
-name: default
+name: deploy
 steps: 
   - 
-    image: appleboy/drone-scp
-    name: scp
+    image: drillster/drone-rsync
+    name: deploy
     settings: 
-      host: 
-        from_secret: sync_server
-      password: 
-        from_secret: sync_password
+      hosts: 
+        - web.clemawe.com
+      include: 
+        - /
+      exclude: [ ".gitignore", ".drone.yml", "_config.yml" ]
+      key: 
+        from_secret: deploy_key
       port: 
-        from_secret: sync_port
-      source: /
+        from_secret: deploy_port
       target: 
-        from_secret: sync_target
-      username: 
-        from_secret: sync_user
+        from_secret: deploy_target
+      user: 
+        from_secret: deploy_user
 trigger: 
   branch: 
     - master
