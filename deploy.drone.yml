@@ -20,4 +20,4 @@ steps:
         from_secret: deploy_port
       target:
         from_secret: deploy_target
-      source: "release.tar.gz"
+      source: "*"
