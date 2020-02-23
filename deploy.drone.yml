@@ -7,19 +7,17 @@ platform:
   arch: arm
 
 steps: 
-  - name: deploy
-    image: drillster/drone-rsync
-    settings: 
-      hosts: 
-        - "web.clemawe.com"
-      include: 
-        - "/"
-      exclude: [ ".gitignore", ".drone.yml", "_config.yml" ]
+  - name: scp files
+    image: appleboy/drone-scp
+    settings:
+      host:
+        from_secret: deploy_host
+      username: 
+        from_secret: deploy_user
       key: 
         from_secret: deploy_key
       port: 
         from_secret: deploy_port
-      target: 
+      target:
         from_secret: deploy_target
-      user: 
-        from_secret: deploy_user
+      source: "*"
