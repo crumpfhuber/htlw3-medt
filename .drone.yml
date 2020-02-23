@@ -1,0 +1,9 @@
+name: scp files
+  image: appleboy/drone-scp
+  settings:
+    host: sync_server
+    username: sync_user
+    password: sync_password
+    port: sync_port
+    target: sync_target
+    source: release.tar.gz
