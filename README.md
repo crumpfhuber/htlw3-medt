@@ -57,5 +57,5 @@
 
 ## PHP
 
-### Beispiele
-* Beispiel 01 - Sonderzeichen: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/BSP01_Sonderzeichen/) - [Preview](https://htlw3-medt.clmns.dev/PHP/BSP01_Sonderzeichen/)
+### Übungen
+* Übung 01 - Sonderzeichen: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE01_Sonderzeichen/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE01_Sonderzeichen/)
