@@ -1,0 +1,21 @@
+---
+kind: pipeline
+name: deploy
+
+platform:
+  os: linux
+  arch: arm
+
+steps: 
+  - name: ssh deploy
+    image: appleboy/drone-ssh
+    settings:
+      host:
+        from_secret: deploy_host
+      username: 
+        from_secret: deploy_user
+      key: 
+        from_secret: deploy_key
+      port: 
+        from_secret: deploy_port
+      script: "cd /var/www/clmns.dev/htlw3-medt && git pull && markdown README.md --title 'Medientechnik 3' --stylesheet style.css > index.html"
