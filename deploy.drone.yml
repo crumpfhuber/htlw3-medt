@@ -6,6 +6,9 @@ platform:
   os: linux
   arch: arm
 
+clone:
+  disable: true
+
 steps: 
   - name: ssh deploy
     image: appleboy/drone-ssh
