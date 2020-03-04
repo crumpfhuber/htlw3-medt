@@ -5,6 +5,7 @@
 ## JavaScript
 
 ### Beispiele
+
 * Beispiel 01 - Hello World: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/BSP01_HelloWorld/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/BSP01_HelloWorld/)
 
 * Beispiel 02 - Externe Datei: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/BSP02_ExterneDatei/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/BSP02_ExterneDatei/)
@@ -32,6 +33,7 @@
 * Beispiel 13 - Formular 2: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/BSP13_Formular2/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/BSP13_Formular2/)
 
 ### Übungen
+
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/UE01_Quadrate/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/UE01_Quadrate)
 
 * Übung 02 - Zeichenfolge: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/UE02_Zeichenfolge/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/UE02_Zeichenfolge/)
@@ -53,9 +55,13 @@
 * Übung 10 - Formular 2: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/UE10_Formular2/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/UE10_Formular2/)
 
 ### Praktische Leistungsfeststellungen
+
 * PLF 01 - Arrays (Übung 01-05 / Beispiel 01-10): [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/PLF01_Arrays/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/PLF01_Arrays/)
 
 ## PHP
 
 ### Übungen
+
 * Übung 01 - Sonderzeichen: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE01_Sonderzeichen/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE01_Sonderzeichen/)
+
+* Übung 02 - Konstanten: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE02_Konstanten/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE02_Konstanten/)
