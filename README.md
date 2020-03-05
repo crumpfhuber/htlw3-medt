@@ -65,3 +65,5 @@
 * Übung 01 - Sonderzeichen: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE01_Sonderzeichen/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE01_Sonderzeichen/)
 
 * Übung 02 - Konstanten: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE02_Konstanten/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE02_Konstanten/)
+
+* Übung 03 - Preisberechnung: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE03_Preisberechnung/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE03_Preisberechnung/)
