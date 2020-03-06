@@ -1,6 +1,6 @@
 [![Build Status](https://drone.clmns.dev/api/badges/crumpfhuber/htlw3-medt/status.svg)](https://drone.clmns.dev/crumpfhuber/htlw3-medt)
 
-# Inhaltsverzeichnis
+# Medientechnik 3
 
 ## JavaScript
 
