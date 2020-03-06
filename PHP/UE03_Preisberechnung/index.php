@@ -104,7 +104,7 @@ $brutto_gesamt = $preis_brutto_schreibtisch * $anzahl_schreibtisch + $preis_brut
     <tr>
         <td><?php echo "\$bez_schreibtisch"; ?></td>
         <td><?php echo $bez_schreibtisch; ?></td>
-        <td>$preis_schreibtisch</td>
+        <td><?php echo "\$preis_schreibtisch"; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_schreibtisch; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_brutto_schreibtisch; ?></td>
         <td><?php echo $anzahl_schreibtisch; ?></td>
@@ -113,7 +113,7 @@ $brutto_gesamt = $preis_brutto_schreibtisch * $anzahl_schreibtisch + $preis_brut
     <tr>
         <td><?php echo "\$bez_stuhl"; ?></td>
         <td><?php echo $bez_stuhl; ?></td>
-        <td>$preis_stuhl</td>
+        <td><?php echo "\$preis_stuhl"; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_stuhl; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_brutto_stuhl; ?></td>
         <td><?php echo $anzahl_stuhl; ?></td>
@@ -122,7 +122,7 @@ $brutto_gesamt = $preis_brutto_schreibtisch * $anzahl_schreibtisch + $preis_brut
     <tr>
         <td><?php echo "\$bez_uhr"; ?></td>
         <td><?php echo $bez_uhr; ?></td>
-        <td>$preis_schreibtisch</td>
+        <td><?php echo "\$preis_schreibtisch"; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_brutto_uhr; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_brutto_uhr; ?></td>
         <td><?php echo $anzahl_uhr; ?></td>
@@ -131,7 +131,7 @@ $brutto_gesamt = $preis_brutto_schreibtisch * $anzahl_schreibtisch + $preis_brut
     <tr>
         <td><?php echo "\$bez_schreibtisch"; ?></td>
         <td><?php echo $bez_schreibtisch; ?></td>
-        <td>$preis_schreibtisch</td>
+        <td><?php echo "\$preis_schreibtisch"; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_schreibtisch; ?></td>
         <td><?php echo euro_zeichen . " " . $preis_brutto_schreibtisch; ?></td>
         <td><?php echo $anzahl_trennwand; ?></td>
