@@ -32,6 +32,8 @@
 
 * Beispiel 13 - Formular 2: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/BSP13_Formular2/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/BSP13_Formular2/)
 
+* Beispiel 14 - Klick Klack Kluck: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/BSP14_KlickKlackKluck/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/BSP14_KlickKlackKluck/)
+
 ### Übungen
 
 * Übung 01 - Quadrate: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/UE01_Quadrate/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/UE01_Quadrate)
