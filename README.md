@@ -60,6 +60,8 @@
 
 * PLF 01 - Arrays (Übung 01-05 / Beispiel 01-10): [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/PLF01_Arrays/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/PLF01_Arrays/)
 
+* PLF 02 - DOM (Übung 06-10 / Beispiel 11-14): [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/JavaScript/PLF02_DOM/) - [Preview](https://htlw3-medt.clmns.dev/JavaScript/PLF02_DOM/)
+
 ## PHP
 
 ### Übungen
