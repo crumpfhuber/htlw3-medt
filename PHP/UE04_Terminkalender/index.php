@@ -21,9 +21,13 @@ switch ($_GET['sortierung']) {
     case "ort_down": array_multisort($ort, SORT_DESC, $termin); break;
 }
 
-function datum_deutsch ($date) {
+function datum_deutsch($date) {
     $date = str_split($date);
     return $date[6] . $date[7] . '.' . $date[4] . $date[5] . '.' . $date[0] . $date[1] . $date[2] . $date[3];
+}
+
+function farbwechsel($id) {
+    return "row-color-" . ($id % 2 == 0 ? "1" : "2");
 }
 ?>
 
@@ -62,15 +66,20 @@ function datum_deutsch ($date) {
 
         table {
             width: 50%;
+            size: 20pt !important;
         }
 
         table thead tr td {
-            background-color: gray;
+            background-color: #0311FC;
             text-align: center;
         }
 
-        table tbody tr:nth-child(odd) {
-            background-color: #f2f2f2;
+        .row-color-1 {
+            background-color: #4048C9 !important;
+        }
+
+        .row-color-2 {
+            background-color: #505AFC !important;
         }
 
         footer {
@@ -97,7 +106,7 @@ function datum_deutsch ($date) {
     <tbody>
     <?php
     foreach ($termin as $id => $obj)
-        echo '<tr><td>' . ($id + 1) . '.</td><td>' . datum_deutsch($obj['Datum'])  . '</td><td>' . $obj['Band'] . '</td><td>' . $obj['Ort'] . '</td></tr>';
+        echo '<tr class="' . farbwechsel($id) . '"><td>' . ($id + 1) . '.</td><td>' . datum_deutsch($obj['Datum'])  . '</td><td>' . $obj['Band'] . '</td><td>' . $obj['Ort'] . '</td></tr>';
     ?>
     </tbody>
 </table>
