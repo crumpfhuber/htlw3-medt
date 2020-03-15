@@ -82,7 +82,7 @@ function farbwechsel($id) {
             background-color: #505AFC !important;
         }
 
-        a:* {
+        a {
             color: white;
         }
 
