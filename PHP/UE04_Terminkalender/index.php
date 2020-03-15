@@ -82,6 +82,10 @@ function farbwechsel($id) {
             background-color: #505AFC !important;
         }
 
+        a:* {
+            color: white;
+        }
+
         footer {
             height: 30px;
             width: 100%;
