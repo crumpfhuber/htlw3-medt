@@ -63,6 +63,7 @@
 
 <?php
 const euro_zeichen = "€";
+const mwst = 1.2;
 
 $bez_schreibtisch = "Schreibtisch";
 $bez_stuhl = "Stuhl";
@@ -74,10 +75,10 @@ $preis_stuhl = 679;
 $preis_uhr = 78;
 $preis_trennwand = 499;
 
-$preis_brutto_schreibtisch = $preis_schreibtisch * 1.2;
-$preis_brutto_stuhl = $preis_stuhl * 1.2;
-$preis_brutto_uhr = $preis_uhr * 1.2;
-$preis_brutto_trennwand = $preis_trennwand * 1.2;
+$preis_brutto_schreibtisch = $preis_schreibtisch * mwst;
+$preis_brutto_stuhl = $preis_stuhl * mwst;
+$preis_brutto_uhr = $preis_uhr * mwst;
+$preis_brutto_trennwand = $preis_trennwand * mwst;
 
 $anzahl_schreibtisch = 30;
 $anzahl_stuhl = 30;
