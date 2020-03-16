@@ -4,7 +4,7 @@ $termin[] = array('Datum' => 20201208, 'Ort' => "Wels", 'Band' => "Warcraft awak
 $termin[] = array('Datum' => 20210311, 'Ort' => "Wien", 'Band' => "Monster legends coming");
 $termin[] = array('Datum' => 20220628, 'Ort' => "Linz", 'Band' => "Starcraft forever");
 $termin[] = array('Datum' => 20220628, 'Ort' => "Graz", 'Band' => "Doom arising");
-$termin[] = array('Datum' => 20230628, 'Ort' => "Garz", 'Band' => "Get out of here");
+$termin[] = array('Datum' => 20230628, 'Ort' => "Graz", 'Band' => "Get out of here");
 
 foreach ($termin as $id => $obj) {
     $band[$id] = strtolower($obj['Band'] );
