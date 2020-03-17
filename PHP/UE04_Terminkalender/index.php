@@ -6,19 +6,21 @@ $termin[] = array('Datum' => 20220628, 'Ort' => "Linz", 'Band' => "Starcraft for
 $termin[] = array('Datum' => 20220628, 'Ort' => "Graz", 'Band' => "Doom arising");
 $termin[] = array('Datum' => 20230628, 'Ort' => "Graz", 'Band' => "Get out of here");
 
-foreach ($termin as $id => $obj) {
-    $band[$id] = strtolower($obj['Band'] );
-    $ort[$id] = strtolower($obj['Ort'] );
-    $datum[$id] = strtolower($obj['Datum'] );
-}
+if (isset($_GET['sortierung'])) {
+    foreach ($termin as $id => $obj) {
+        $band[$id] = strtolower($obj['Band'] );
+        $ort[$id] = strtolower($obj['Ort'] );
+        $datum[$id] = strtolower($obj['Datum'] );
+    }
 
-switch ($_GET['sortierung']) {
-    case "datum_up": array_multisort($datum, SORT_ASC, $termin); break;
-    case "datum_down": array_multisort($datum, SORT_DESC, $termin); break;
-    case "band_up": array_multisort($band, SORT_ASC, $termin); break;
-    case "band_down": array_multisort($band, SORT_DESC, $termin); break;
-    case "ort_up": array_multisort($ort, SORT_ASC, $termin); break;
-    case "ort_down": array_multisort($ort, SORT_DESC, $termin); break;
+    switch ($_GET['sortierung']) {
+        case "datum_up": array_multisort($datum, SORT_ASC, $termin); break;
+        case "datum_down": array_multisort($datum, SORT_DESC, $termin); break;
+        case "band_up": array_multisort($band, SORT_ASC, $termin); break;
+        case "band_down": array_multisort($band, SORT_DESC, $termin); break;
+        case "ort_up": array_multisort($ort, SORT_ASC, $termin); break;
+        case "ort_down": array_multisort($ort, SORT_DESC, $termin); break;
+    }
 }
 
 function datum_deutsch($date) {
