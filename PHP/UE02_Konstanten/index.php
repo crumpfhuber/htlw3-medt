@@ -19,8 +19,6 @@
             font-family: 'Roboto', sans-serif;
             font-size: 14pt;
             line-height: 1.8;
-
-            counter-reset: counter1;
         }
 
         h1, h2, h3, h4, h5 {
