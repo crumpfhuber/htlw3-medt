@@ -71,3 +71,7 @@
 * Übung 02 - Konstanten: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE02_Konstanten/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE02_Konstanten/)
 
 * Übung 03 - Preisberechnung: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE03_Preisberechnung/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE03_Preisberechnung/)
+
+* Übung 04 - Terminkalender: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE04_Terminkalender/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE04_Terminkalender/)
+
+* Übung 05 - Taschenrechner: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE05_Taschenrechner/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE05_Taschenrechner/)
