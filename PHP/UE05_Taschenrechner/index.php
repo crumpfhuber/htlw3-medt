@@ -1,7 +1,8 @@
 <!-- Clemens Rumpfhuber 3AHIT -->
 <?php
 if (isset($_POST['number_1']) && isset($_POST['number_2']) && isset($_POST['operator']))
-    $result = eval('return ' . $_POST['number_1'] . $_POST['operator'] . $_POST['number_2'] . ';');
+    if (!($_POST['operator'] == '/' && $_POST['number_2'] == 0))
+        $result = eval('return ' . $_POST['number_1'] . $_POST['operator'] . $_POST['number_2'] . ';');
 ?>
 
 <!DOCTYPE html>
