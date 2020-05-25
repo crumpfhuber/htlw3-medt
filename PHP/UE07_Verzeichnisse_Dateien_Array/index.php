@@ -1,6 +1,6 @@
 <!-- Clemens Rumpfhuber 3AHIT -->
 <?php
-$files = glob('./rumpfhuber_*.{jpg,JPG}', GLOB_BRACE);
+$files = glob('./*.{jpg,JPG}', GLOB_BRACE);
 ?>
 
 <!DOCTYPE html>
