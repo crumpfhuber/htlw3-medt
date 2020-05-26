@@ -75,3 +75,7 @@
 * Übung 04 - Terminkalender: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE04_Terminkalender/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE04_Terminkalender/)
 
 * Übung 05 - Taschenrechner: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE05_Taschenrechner/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE05_Taschenrechner/)
+
+* Übung 06 - Terminkalender Dateien: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE06_Terminkalender_Dateien/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE06_Terminkalender_Dateien/)
+
+* Übung 07 - Verzeichnisse, Dateien, Array: [Source Code](https://github.com/crumpfhuber/htlw3-medt/tree/master/PHP/UE07_Verzeichnisse_Dateien_Array/) - [Preview](https://htlw3-medt.clmns.dev/PHP/UE07_Verzeichnisse_Dateien_Array/)
