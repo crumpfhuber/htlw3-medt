@@ -1,6 +1,6 @@
 <!-- Clemens Rumpfhuber 3AHIT -->
 <?php
-$files = glob('./*.{jpg,JPG}', GLOB_BRACE);
+$bilderdateinamen = glob('./*.{jpg,JPG}', GLOB_BRACE);
 ?>
 
 <!DOCTYPE html>
@@ -75,35 +75,39 @@ $files = glob('./*.{jpg,JPG}', GLOB_BRACE);
 
 <h1>Übung 07 - Verzeichnisse, Dateien, Array</h1>
 
-<table>
-    <thead>
-    <tr>
-        <td rowspan="2">Bild</td>
-        <td colspan="3">Header Informationen</td>
-    </tr>
-    <tr>
-        <td>Image Title / Comment</td>
-        <td>File Name</td>
-        <td>Mime Type</td>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    foreach ($files as $id => $file) {
-        $header_info = "";
-        $header = exif_read_data($file);
-        if ($header != NULL) {
-            $header_info .= "<td>" . (isset($header['COMMENT']) ? implode("; ", $header['COMMENT']) : '<span class="error">Information not found!</span>') . "</td>";
-            $header_info .= "<td>" . (isset($header['FileName']) ? $header['FileName'] : '<span class="error">Information not found!</span>') . "</td>";
-            $header_info .=  "<td>" . (isset($header['MimeType']) ? $header['MimeType'] : '<span class="error">Information not found!</span>') . "</td>";
-        } else $header_info = '<td colspan="3" class="error">Error: No header information found!</td>';
-        echo '<tr><td><a target="_blank" href="'.$file.'"><img src="'.$file.'" alt="Image '.$id.'"></a></td>'.$header_info.'</tr>';
-    }
-    ?>
-    </tbody>
-</table>
-
-
+<?php if ($bilderdateinamen != NULL) { ?>
+    <table>
+        <thead>
+        <tr>
+            <td rowspan="2">Bild</td>
+            <td colspan="3">Header Informationen</td>
+        </tr>
+        <tr>
+            <td>Image Title / Comment</td>
+            <td>File Name</td>
+            <td>Mime Type</td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach ($bilderdateinamen as $id => $img) {
+            $header_info = "";
+            $header = exif_read_data($img);
+            if ($header != NULL) {
+                $header_info .= "<td>" . (isset($header['COMMENT']) ? implode("; ", $header['COMMENT']) : '<span class="error">Information not found!</span>') . "</td>";
+                $header_info .= "<td>" . (isset($header['FileName']) ? $header['FileName'] : '<span class="error">Information not found!</span>') . "</td>";
+                $header_info .=  "<td>" . (isset($header['MimeType']) ? $header['MimeType'] : '<span class="error">Information not found!</span>') . "</td>";
+            } else $header_info = '<td colspan="3" class="error">Error: No header information found!</td>';
+            echo '<tr><td><a target="_blank" href="'.$img.'"><img src="'.$img.'" alt="Image '.$id.'"></a></td>'.$header_info.'</tr>';
+        }
+        ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div class="error">
+        No Images found!
+    </div>
+<?php } ?>
 <footer>&copy; Clemens Rumpfhuber 3AHIT</footer>
 </body>
 </html>
