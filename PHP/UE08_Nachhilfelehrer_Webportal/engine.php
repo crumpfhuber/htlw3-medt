@@ -16,8 +16,6 @@ if (($page_name = $page_list[$page]) == NULL)
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="/assets/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -40,6 +38,8 @@ if (($page_name = $page_list[$page]) == NULL)
 </nav>
 
 <div class="container">
+    <h3><?php echo $page_name; ?></h3>
+
     <?php include 'pages/' . $page . '.php'; ?>
 </div>
 
