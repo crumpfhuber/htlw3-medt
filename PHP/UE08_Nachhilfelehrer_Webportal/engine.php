@@ -64,6 +64,7 @@ if (($page_name = $page_list[$page]) == NULL)
                     <li><a class="grey-text text-lighten-3" href="/map">Lageplan</a></li>
                     <li><a class="grey-text text-lighten-3" href="/imprint">Impressum</a></li>
                     <li><a class="grey-text text-lighten-3" href="/privacy">Datenschutzerklärung</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/login">Anmelden</a></li>
                 </ul>
             </div>
         </div>

@@ -1,11 +1,12 @@
 <?php
 
 $page_list = array(
-    "contact" => "Kontaktanfragen",
+    "contact" => "Kontaktanfrage",
     "download" => "Downloadbereich",
     "home" => "Willkommen",
     "imprint" => "Impressum",
     "information" => "Informationsmaterial",
+    "login" => "Webmaster-Bereich",
     "map" => "Lageplan",
     "news" => "Aktuelles",
     "privacy" => "Datenschutzerklärung",
