@@ -1,10 +1,11 @@
 <?php
 require_once 'settings.php';
+require_once 'database.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : "home";
 
 if (($page_name = $page_list[$page]) == NULL)
-    die("A error occurred. Please contact the website admin!");
+    die("An error occurred. Please contact the webmaster!");
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +39,10 @@ if (($page_name = $page_list[$page]) == NULL)
     </div>
 </nav>
 
-<?php include 'pages/' . $page . '.php'; ?>
+<div class="container">
+    <?php include 'pages/' . $page . '.php'; ?>
+</div>
+
 
 <footer class="page-footer">
     <div class="container">
