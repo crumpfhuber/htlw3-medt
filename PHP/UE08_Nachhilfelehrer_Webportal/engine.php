@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once 'settings.php';
 require_once 'database.php';
 
@@ -16,16 +18,32 @@ if (($page_name = $page_list[$page]) == NULL)
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script type="text/javascript" src="/assets/jquery.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="/assets/script.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
+<?php if (isset($_SESSION['user_id'])) { ?>
+    <ul id="admin-dropdown" class="dropdown-content">
+        <li><span><?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname']; ?></span></li>
+        <li class="divider"></li>
+        <li><a href="#!">News-Verwaltung</a></li>
+        <li><a href="#!">Dateien</a></li>
+        <li><a href="#!">Kontaktanfragen</a></li>
+        <li class="divider"></li>
+        <li><a href="/logout">Abmelden</a></li>
+    </ul>
+<?php } ?>
+
 <nav>
     <div class="nav-wrapper">
-        <a href="/home" class="brand-logo">hier logo</a>
+        <a href="/home" class="brand-logo">logo</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/home">Startseite</a></li>
             <li><a href="/news">Aktuelles</a></li>
@@ -33,6 +51,9 @@ if (($page_name = $page_list[$page]) == NULL)
             <li><a href="/download">Downloadbereich</a></li>
             <li><a href="/rating">Bewertungen</a></li>
             <li><a href="/contact">Kontaktanfrage</a></li>
+            <?php if (isset($_SESSION['user_id'])) { ?>
+                <li><a class="dropdown-trigger blue lighten-1" href="#" data-target="admin-dropdown">Webmaster Bereich<i class="material-icons right">arrow_drop_down</i></a></li>
+            <?php } ?>
         </ul>
     </div>
 </nav>

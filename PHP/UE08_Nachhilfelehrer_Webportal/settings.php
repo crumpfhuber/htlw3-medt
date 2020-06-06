@@ -1,12 +1,14 @@
 <?php
 
 $page_list = array(
+    "admin-dashboard" => "Webmaster Bereich",
     "contact" => "Kontaktanfrage",
     "download" => "Downloadbereich",
     "home" => "Willkommen",
     "imprint" => "Impressum",
     "information" => "Informationsmaterial",
     "login" => "Webmaster-Bereich",
+    "logout" => "Webmaster-Bereich",
     "map" => "Lageplan",
     "news" => "Aktuelles",
     "privacy" => "Datenschutzerklärung",
