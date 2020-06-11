@@ -42,6 +42,20 @@ function getFile($file_id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+function getAllFiles() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT `sid`, `mime_type`, `name`, `comment` FROM `file`');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function deleteFile($file_id) {
+    global $pdo;
+    $statement = $pdo->prepare('DELETE FROM `file` WHERE `sid` = :id');
+    $statement->bindParam(":id", $file_id);
+    return $statement->execute();
+}
+
 function addContactRequest($firstname, $lastname, $email, $content, $file_id=NULL) {
     global $pdo;
     $statement = $pdo->prepare('INSERT INTO `contact`(`firstname`, `lastname`, `email`, `content`, `attachment`) VALUES (:firstname, :lastname, :email, :content, :attachment)');

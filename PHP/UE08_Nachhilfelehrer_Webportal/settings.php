@@ -2,6 +2,7 @@
 
 $page_list = array(
     "admin-dashboard" => "Webmaster Bereich",
+    "admin-files" => "Dateimanager",
     "contact" => "Kontaktanfrage",
     "download" => "Downloadbereich",
     "home" => "Willkommen",
