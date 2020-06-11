@@ -3,7 +3,7 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^([^/]+)/?$ /engine.php?page=$1 [L]
+RewriteRule ^([^/]+)/?$ /engine.php?page=$1 [L,PT,QSA]
 
 RedirectMatch ^/$ /home
 
