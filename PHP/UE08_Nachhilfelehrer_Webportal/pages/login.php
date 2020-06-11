@@ -1,14 +1,27 @@
+<?php
+if (isset($_POST['email']) && isset($_POST['password'])) {
+    $user = getUser($_POST['email']);
+    if (password_verify($_POST['password'], $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['firstname'] = $user['firstname'];
+        $_SESSION['lastname'] = $user['lastname'];
+    }
+}
+if (isset($_SESSION['user_id']))
+    die('<meta http-equiv="refresh" content="0; URL=/admin-dashboard">');
+?>
+
 <div class="row">
-    <form class="col s12" method="post">
+    <form class="col s12" action="" method="post">
 
         <div class="row">
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate" required>
+                <input id="email" name="email" type="email" class="validate" required>
                 <label for="email">E-Mail Adresse</label>
             </div>
 
             <div class="input-field col s12">
-                <input id="password" type="password" class="validate" required>
+                <input id="password" name="password" type="password" class="validate" required>
                 <label for="password">Passwort</label>
             </div>
         </div>
