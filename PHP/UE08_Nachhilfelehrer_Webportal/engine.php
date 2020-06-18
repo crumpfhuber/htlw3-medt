@@ -42,7 +42,7 @@ if (($page_name = $page_list[$page]) == NULL)
 <?php } ?>
 
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper blue lighten-1"">
         <a href="/home" class="brand-logo">logo</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/home">Startseite</a></li>
@@ -52,7 +52,7 @@ if (($page_name = $page_list[$page]) == NULL)
             <li><a href="/rating">Bewertungen</a></li>
             <li><a href="/contact">Kontaktanfrage</a></li>
             <?php if (isset($_SESSION['user_id'])) { ?>
-                <li><a class="dropdown-trigger blue lighten-1" href="#" data-target="admin-dropdown">Webmaster Bereich<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger  red accent-1" href="#" data-target="admin-dropdown">Webmaster Bereich<i class="material-icons right">arrow_drop_down</i></a></li>
             <?php } ?>
         </ul>
     </div>
@@ -65,7 +65,7 @@ if (($page_name = $page_list[$page]) == NULL)
 </div>
 
 
-<footer class="page-footer">
+<footer class="page-footer blue lighten-1">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
