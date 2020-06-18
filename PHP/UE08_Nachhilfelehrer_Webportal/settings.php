@@ -1,6 +1,7 @@
 <?php
 
 $page_list = array(
+    "admin-contact" => "Kontaktanfragen",
     "admin-dashboard" => "Webmaster Bereich",
     "admin-files" => "Dateimanager",
     "contact" => "Kontaktanfrage",
