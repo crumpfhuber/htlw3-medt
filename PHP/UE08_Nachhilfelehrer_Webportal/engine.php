@@ -26,6 +26,8 @@ if (($page_name = $page_list[$page]) == NULL)
     <script type="text/javascript" src="/assets/script.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="/assets/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -42,7 +44,7 @@ if (($page_name = $page_list[$page]) == NULL)
 <?php } ?>
 
 <nav>
-    <div class="nav-wrapper blue lighten-1"">
+    <div class="nav-wrapper blue lighten-1">
         <a href="/home" class="brand-logo">logo</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/home">Startseite</a></li>
