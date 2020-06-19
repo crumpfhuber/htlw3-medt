@@ -8,7 +8,6 @@ if (isset($_FILES['file'])) {
 
 if (isset($_GET['delete'])) {
     deleteFile($_GET['delete']);
-    die('<meta http-equiv="refresh" content="0; URL=/admin-files">');
 }
 
 $files = getAllFiles(); ?>
@@ -72,7 +71,7 @@ $files = getAllFiles(); ?>
 <script>
     (function ($) {
         $(function () {
-            $('.modal').modal(); //initialize all modals
+            $('.modal').modal();
         });
     })(jQuery);
 </script>
