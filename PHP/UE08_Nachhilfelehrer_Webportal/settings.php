@@ -3,6 +3,7 @@
 $page_list = array(
     "admin-contact" => "Webmaster &middot; Kontaktanfragen",
     "admin-dashboard" => "Webmaster &middot; Home",
+    "admin-download" => "Webmaster &middot; Downloadbereich",
     "admin-files" => "Webmaster &middot; Dateimanager",
     "admin-information" => "Webmaster &middot; Informationsmaterial",
     "admin-news" => "Webmaster &middot; News",

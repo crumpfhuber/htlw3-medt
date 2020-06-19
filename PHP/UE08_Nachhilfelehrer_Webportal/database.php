@@ -151,7 +151,7 @@ function getInformationDocument($doc_id) {
 function deleteInformationDocument($doc_id) {
     global $pdo;
 
-    $document = getInformationDocument($doc_id); // get file tupel information for file delete
+    $document = getInformationDocument($doc_id); // get information for file delete
 
     $statement = $pdo->prepare('DELETE FROM `infodoc` WHERE `id` = :id');
     $statement->bindParam(":id", $doc_id);
@@ -167,4 +167,40 @@ function addInformationDocument($file_id, $description) {
     $statement->bindParam(":file", $file_id);
     $statement->execute();
     return $statement->fetch();
+}
+
+function getDownloadDocuments() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `download`');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getDownloadDocument($doc_id) {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `download` WHERE `id` = :id');
+    $statement->bindParam(":id", $doc_id);
+    $statement->execute();
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function addDownloadDocument($file_id, $description) {
+    global $pdo;
+    $statement = $pdo->prepare('INSERT INTO `download`(`description`, `file`) VALUES (:description, :file)');
+    $statement->bindParam(":description", $description);
+    $statement->bindParam(":file", $file_id);
+    $statement->execute();
+    return $statement->fetch();
+}
+
+function deleteDownloadDocument($doc_id) {
+    global $pdo;
+
+    $document = getDownloadDocument($doc_id); // get information for file delete
+
+    $statement = $pdo->prepare('DELETE FROM `download` WHERE `id` = :id');
+    $statement->bindParam(":id", $doc_id);
+    $statement->execute();
+
+    deleteFile($document['file']); // delete file out of database
 }
