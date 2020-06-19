@@ -15,8 +15,7 @@ $requests = getContactRequests(); ?>
         <th>Vorname</th>
         <th>E-Mail</th>
         <th>Content</th>
-        <th>Anhang</th>
-        <th class="right"></th>
+        <th class="right" colspan="3"></th>
     </tr>
     </thead>
     <tbody>
@@ -25,18 +24,18 @@ $requests = getContactRequests(); ?>
             <td><?php echo $request['lastname']; ?></td>
             <td><?php echo $request['firstname']; ?></td>
             <td><?php echo $request['email']; ?></td>
-            <td><?php echo $request['content']; ?></td>
+            <td><?php echo nl2br($request['content']); ?></td>
             <td>
                 <?php
                 if (isset($request['attachment']) != "")
-                    echo '<a href="/file/' . $request['attachment'] . '" target="_blank"><i class="material-icons">attach_file</i></a>';
-                else
-                    echo 'n/a';
+                    echo '<a href="/file/' . $request['attachment'] . '" target="_blank"><i class="material-icons grey-text text-lighten-1">attach_file</i></a>';
                 ?>
             </td>
             <td>
                 <a href="mailto:<?php echo $request['email']; ?>?subject=Antwort auf Ihre Kontaktanfrage"><i class="material-icons">email</i></a>
-                <a href="?delete=<?php echo $request['id']; ?>"><i class="material-icons right">delete</i></a>
+            </td>
+            <td>
+                <a href="?delete=<?php echo $request['id']; ?>"><i class="material-icons red-text text-red-4">delete</i></a>
             </td>
         </tr>
     <?php } ?>
