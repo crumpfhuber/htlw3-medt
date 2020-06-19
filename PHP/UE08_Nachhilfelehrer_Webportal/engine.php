@@ -35,8 +35,9 @@ if (($page_name = $page_list[$page]) == NULL)
     <ul id="admin-dropdown" class="dropdown-content">
         <li><span><?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname']; ?></span></li>
         <li class="divider"></li>
-        <li><a href="/admin-news">News-Verwaltung</a></li>
         <li><a href="/admin-files">Dateimanager</a></li>
+        <li><a href="/admin-news">News</a></li>
+        <li><a href="/admin-information">Informationsmaterial</a></li>
         <li><a href="/admin-contact">Kontaktanfragen</a></li>
         <li class="divider"></li>
         <li><a href="/logout">Abmelden</a></li>

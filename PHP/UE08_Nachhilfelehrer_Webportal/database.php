@@ -110,8 +110,8 @@ function getContactRequests() {
 function deleteContactRequest($request_id) {
     global $pdo;
     $request = getContactRequest($request_id);
-    if ($request['attachment'] != "")
-        deleteFile($request['attachment']);
+    if ($request['attachment'] != "") // check if attachment exists
+        deleteFile($request['attachment']); // delete file out of database
     $statement = $pdo->prepare('DELETE FROM `contact` WHERE `id` = :id');
     $statement->bindParam(":id", $request_id);
     return $statement->execute();
@@ -131,4 +131,40 @@ function getUserNameById($id) {
     $statement->bindParam(":id", $id);
     $statement->execute();
     return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function getInformationDocuments() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `infodoc`');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getInformationDocument($doc_id) {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `infodoc` WHERE `id` = :id');
+    $statement->bindParam(":id", $doc_id);
+    $statement->execute();
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function deleteInformationDocument($doc_id) {
+    global $pdo;
+
+    $document = getInformationDocument($doc_id); // get file tupel information for file delete
+
+    $statement = $pdo->prepare('DELETE FROM `infodoc` WHERE `id` = :id');
+    $statement->bindParam(":id", $doc_id);
+    $statement->execute();
+
+    deleteFile($document['file']); // delete file out of database
+}
+
+function addInformationDocument($file_id, $description) {
+    global $pdo;
+    $statement = $pdo->prepare('INSERT INTO `infodoc`(`description`, `file`) VALUES (:description, :file)');
+    $statement->bindParam(":description", $description);
+    $statement->bindParam(":file", $file_id);
+    $statement->execute();
+    return $statement->fetch();
 }
