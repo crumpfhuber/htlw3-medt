@@ -43,7 +43,7 @@ function farbwechsel($id) {
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Übung 04 - Terminkalender</title>
+    <title>Übung 06 - Terminkalender</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
@@ -104,7 +104,7 @@ function farbwechsel($id) {
 </head>
 <body>
 
-<h1>Übung 04 - Terminkalender</h1>
+<h1>Übung 06 - Terminkalender</h1>
 
 <table>
     <thead>
