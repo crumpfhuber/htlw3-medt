@@ -1,9 +1,10 @@
 <?php
 
 $page_list = array(
-    "admin-contact" => "Kontaktanfragen",
-    "admin-dashboard" => "Webmaster Bereich",
-    "admin-files" => "Dateimanager",
+    "admin-contact" => "Webmaster &middot; Kontaktanfragen",
+    "admin-dashboard" => "Webmaster &middot; Home",
+    "admin-files" => "Webmaster &middot; Dateimanager",
+    "admin-news" => "Webmaster &middot; News",
     "contact" => "Kontaktanfrage",
     "download" => "Downloadbereich",
     "home" => "Willkommen",

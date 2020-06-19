@@ -4,11 +4,28 @@ require_once 'settings.php';
 $pdo = new PDO('mysql:host='. $database_host .';dbname='.$database_schema, $database_username, $database_password);
 
 
-function getShownNews() {
+function getNews() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `news` ORDER BY `timestamp`;');
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function addNewsArticle($headline, $content, $image) {
+    global $pdo;
+    $statement = $pdo->prepare('INSERT INTO `news`(`headline`, `content`, `image`, `author`) VALUES (:headline, :content, :image, :author)');
+    $statement->bindParam(":headline", $headline);
+    $statement->bindParam(":content", $content);
+    $statement->bindParam(":image", $image);
+    $statement->bindParam(":author", $_SESSION['user_id']);
+    return $statement->execute();
+}
+
+function deleteNewsArticle($id) {
+    global $pdo;
+    $statement = $pdo->prepare('DELETE FROM `news` WHERE `id` = :id');
+    $statement->bindParam(":id", $id);
+    return $statement->execute();
 }
 
 function addFile($file_name, $mime_type, $file, $comment) {
@@ -40,6 +57,13 @@ function getFile($file_id) {
     $statement->bindParam(":id", $file_id);
     $statement->execute();
     return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function getAllImages() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT `sid`, `mime_type`, `name`, `comment` from `file` WHERE `mime_type` LIKE \'image/%\' AND NOT comment = \'Uploaded via Contact Form\'');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getAllFiles() {
@@ -97,6 +121,14 @@ function getUser($email) {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `user` WHERE `email` = :email');
     $statement->bindParam(":email", $email);
+    $statement->execute();
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function getUserNameById($id) {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT `firstname`, `lastname` FROM `user` WHERE `id` = :id');
+    $statement->bindParam(":id", $id);
     $statement->execute();
     return $statement->fetch(PDO::FETCH_ASSOC);
 }

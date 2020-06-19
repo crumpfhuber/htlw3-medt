@@ -1,6 +1,6 @@
 <div class="row">
 <?php
-$news = getAllNews();
+$news = getNews();
 foreach ($news as $obj) { ?>
         <div class="col s12 m6">
             <div class="card">
@@ -9,7 +9,7 @@ foreach ($news as $obj) { ?>
                     <span class="card-title"><?php echo $obj['headline']; ?></span>
                 </div>
                 <div class="card-content">
-                    <p><?php echo $obj['content']; ?></p>
+                    <p><?php echo nl2br($obj['content']); ?></p>
                 </div>
             </div>
         </div>
