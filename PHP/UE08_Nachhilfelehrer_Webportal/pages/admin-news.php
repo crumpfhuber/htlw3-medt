@@ -3,10 +3,12 @@ if (!isset($_SESSION['user_id'])) die("You have no permissions to access this si
 
 if (isset($_POST['headline']) && isset($_POST['textarea']) && isset($_POST['image'])) {
     addNewsArticle($_POST['headline'], $_POST['textarea'], $_POST['image']);
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich hinzugefügt!\'})</script>';
 }
 
 if (isset($_GET['delete'])) {
     deleteNewsArticle($_GET['delete']);
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
 $news = getNews();

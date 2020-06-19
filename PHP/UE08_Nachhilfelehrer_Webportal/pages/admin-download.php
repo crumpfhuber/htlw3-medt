@@ -4,10 +4,12 @@ if (!isset($_SESSION['user_id'])) die("You have no permissions to access this si
 if (isset($_FILES['file']) && isset($_POST['description'])) {
     $file = addFile($_FILES['file']['name'], $_FILES['file']['type'], file_get_contents($_FILES['file']['tmp_name']), "Uploaded via Download CP");
     addDownloadDocument($file, $_POST['description']);
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich hinzugefügt!\'})</script>';
 }
 
 if (isset($_GET['delete'])) {
     deleteDownloadDocument($_GET['delete']);
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
 $docs = getDownloadDocuments(); ?>

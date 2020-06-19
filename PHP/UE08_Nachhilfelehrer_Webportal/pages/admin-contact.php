@@ -3,7 +3,7 @@ if (!isset($_SESSION['user_id'])) die("You have no permissions to access this si
 
 if (isset($_GET['delete'])) {
     deleteContactRequest($_GET['delete']);
-    die('<meta http-equiv="refresh" content="0; URL=/admin-contact">');
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
 $requests = getContactRequests(); ?>

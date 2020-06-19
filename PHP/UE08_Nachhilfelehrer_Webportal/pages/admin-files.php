@@ -4,10 +4,12 @@ if (!isset($_SESSION['user_id'])) die("You have no permissions to access this si
 if (isset($_FILES['file'])) {
     $comment = isset($_POST['comment']) ? $_POST['comment'] : "Uploaded via Admin CP";
     addFile($_FILES['file']['name'], $_FILES['file']['type'], file_get_contents($_FILES['file']['tmp_name']), $comment);
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich hinzugefügt!\'})</script>';
 }
 
 if (isset($_GET['delete'])) {
     deleteFile($_GET['delete']);
+    echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
 $files = getAllFiles(); ?>
