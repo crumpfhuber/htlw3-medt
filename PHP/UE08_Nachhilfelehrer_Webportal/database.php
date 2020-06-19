@@ -4,7 +4,7 @@ require_once 'settings.php';
 $pdo = new PDO('mysql:host='. $database_host .';dbname='.$database_schema, $database_username, $database_password);
 
 
-function getAllNews() {
+function getShownNews() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `news` ORDER BY `timestamp`;');
     $statement->execute();
@@ -66,6 +66,31 @@ function addContactRequest($firstname, $lastname, $email, $content, $file_id=NUL
     $statement->bindParam(":attachment", $file_id);
     $statement->execute();
     return $statement->fetch();
+}
+
+function getContactRequest($request_id) {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `contact` WHERE `id` = :id');
+    $statement->bindParam(":id", $request_id);
+    $statement->execute();
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function getContactRequests() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `contact`');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function deleteContactRequest($request_id) {
+    global $pdo;
+    $request = getContactRequest($request_id);
+    if ($request['attachment'] != "")
+        deleteFile($request['attachment']);
+    $statement = $pdo->prepare('DELETE FROM `contact` WHERE `id` = :id');
+    $statement->bindParam(":id", $request_id);
+    return $statement->execute();
 }
 
 function getUser($email) {
