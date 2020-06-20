@@ -5,7 +5,7 @@ if (isset($_GET['delete'])) {
     deleteRating($_GET['delete']);
 }
 
-$ratings = getRatings(); ?>
+$ratings = getAllRatings(); ?>
 
 <table class="highlight responsive-table">
     <thead>

@@ -11,7 +11,7 @@ if (isset($_GET['delete'])) {
     echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
-$news = getNews();
+$news = getAllNews();
 $images = getAllImages(); ?>
 
 <div id="modal-upload" class="modal">

@@ -1,5 +1,6 @@
 <?php
 
+// list of allowed pages
 $page_list = array(
     "admin-contact" => "Webmaster &middot; Kontaktanfragen",
     "admin-dashboard" => "Webmaster &middot; Home",
@@ -21,7 +22,7 @@ $page_list = array(
     "rating" => "Bewertungen",
 );
 
-
+// database credentials and information
 $database_host = "172.16.10.15";
 $database_username = "htlw3-medt";
 $database_password = "rTAq6DqNpUzbNjctKFzqk92mFbHS8kus";

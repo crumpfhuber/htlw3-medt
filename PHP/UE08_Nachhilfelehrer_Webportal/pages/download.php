@@ -1,6 +1,6 @@
 <ul class="collapsible">
     <?php
-    $docs = getDownloadDocuments();
+    $docs = getAllDownloadDocuments();
     foreach ($docs as $obj) { ?>
         <li>
             <div class="collapsible-header">

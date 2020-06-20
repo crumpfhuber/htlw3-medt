@@ -1,16 +1,18 @@
 <?php
-require_once 'settings.php';
+require_once 'settings.php'; // require settings
 
+// connect to database with pdo driver
 $pdo = new PDO('mysql:host='. $database_host .';dbname='.$database_schema, $database_username, $database_password);
 
-
-function getNews() {
+// get all news ordered by timestamp
+function getAllNews() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `news` ORDER BY `timestamp`;');
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// add news article
 function addNewsArticle($headline, $content, $image) {
     global $pdo;
     $statement = $pdo->prepare('INSERT INTO `news`(`headline`, `content`, `image`, `author`) VALUES (:headline, :content, :image, :author)');
@@ -21,6 +23,7 @@ function addNewsArticle($headline, $content, $image) {
     return $statement->execute();
 }
 
+// delete news article by id
 function deleteNewsArticle($id) {
     global $pdo;
     $statement = $pdo->prepare('DELETE FROM `news` WHERE `id` = :id');
@@ -28,6 +31,7 @@ function deleteNewsArticle($id) {
     return $statement->execute();
 }
 
+// add file and return sid of the added file
 function addFile($file_name, $mime_type, $file, $comment) {
     global $pdo;
     $id = '';
@@ -43,6 +47,7 @@ function addFile($file_name, $mime_type, $file, $comment) {
     return getFileId($pdo->lastInsertId())['sid'];
 }
 
+// get file sid (secure id) by file id
 function getFileId($file_id) {
     global $pdo;
     $statement = $pdo->prepare('SELECT `sid` FROM `file` WHERE `id` = :id');
@@ -51,6 +56,7 @@ function getFileId($file_id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+// get file with encoded file content
 function getFile($file_id) {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `file` WHERE `sid` = :id');
@@ -59,6 +65,7 @@ function getFile($file_id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+// get a list of images without file content and is a image and not uploaded by the contact form
 function getAllImages() {
     global $pdo;
     $statement = $pdo->prepare('SELECT `sid`, `mime_type`, `name`, `comment` from `file` WHERE `mime_type` LIKE \'image/%\' AND NOT comment = \'Uploaded via Contact Form\'');
@@ -66,6 +73,7 @@ function getAllImages() {
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// get all files without file content
 function getAllFiles() {
     global $pdo;
     $statement = $pdo->prepare('SELECT `sid`, `mime_type`, `name`, `comment` FROM `file`');
@@ -73,6 +81,7 @@ function getAllFiles() {
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// delete file by sid
 function deleteFile($file_id) {
     global $pdo;
     $statement = $pdo->prepare('DELETE FROM `file` WHERE `sid` = :id');
@@ -80,6 +89,7 @@ function deleteFile($file_id) {
     return $statement->execute();
 }
 
+// add contact request
 function addContactRequest($firstname, $lastname, $email, $content, $file_id=NULL) {
     global $pdo;
     $statement = $pdo->prepare('INSERT INTO `contact`(`firstname`, `lastname`, `email`, `content`, `attachment`) VALUES (:firstname, :lastname, :email, :content, :attachment)');
@@ -92,6 +102,7 @@ function addContactRequest($firstname, $lastname, $email, $content, $file_id=NUL
     return $statement->fetch();
 }
 
+// get contact request
 function getContactRequest($request_id) {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `contact` WHERE `id` = :id');
@@ -100,6 +111,7 @@ function getContactRequest($request_id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+// get all contact requests
 function getContactRequests() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `contact`');
@@ -107,6 +119,7 @@ function getContactRequests() {
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// delete contact request and attachment if exists
 function deleteContactRequest($request_id) {
     global $pdo;
     $request = getContactRequest($request_id);
@@ -117,6 +130,7 @@ function deleteContactRequest($request_id) {
     return $statement->execute();
 }
 
+// get user by email
 function getUser($email) {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `user` WHERE `email` = :email');
@@ -125,6 +139,7 @@ function getUser($email) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+// get firstname and lastname by id
 function getUserNameById($id) {
     global $pdo;
     $statement = $pdo->prepare('SELECT `firstname`, `lastname` FROM `user` WHERE `id` = :id');
@@ -133,13 +148,15 @@ function getUserNameById($id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
-function getInformationDocuments() {
+// get all information documents
+function getAllInformationDocuments() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `infodoc`');
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// get information document by id
 function getInformationDocument($doc_id) {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `infodoc` WHERE `id` = :id');
@@ -148,6 +165,7 @@ function getInformationDocument($doc_id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+// delete information document by id and according file
 function deleteInformationDocument($doc_id) {
     global $pdo;
 
@@ -160,6 +178,7 @@ function deleteInformationDocument($doc_id) {
     deleteFile($document['file']); // delete file out of database
 }
 
+// add file information document
 function addInformationDocument($file_id, $description) {
     global $pdo;
     $statement = $pdo->prepare('INSERT INTO `infodoc`(`description`, `file`) VALUES (:description, :file)');
@@ -169,13 +188,15 @@ function addInformationDocument($file_id, $description) {
     return $statement->fetch();
 }
 
-function getDownloadDocuments() {
+// get all download documents
+function getAllDownloadDocuments() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `download`');
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// get download document by id
 function getDownloadDocument($doc_id) {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `download` WHERE `id` = :id');
@@ -184,6 +205,7 @@ function getDownloadDocument($doc_id) {
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+// add download document
 function addDownloadDocument($file_id, $description) {
     global $pdo;
     $statement = $pdo->prepare('INSERT INTO `download`(`description`, `file`) VALUES (:description, :file)');
@@ -192,6 +214,7 @@ function addDownloadDocument($file_id, $description) {
     return $statement->execute();
 }
 
+// delete download document by id and according file
 function deleteDownloadDocument($doc_id) {
     global $pdo;
 
@@ -204,13 +227,15 @@ function deleteDownloadDocument($doc_id) {
     deleteFile($document['file']); // delete file out of database
 }
 
-function getRatings() {
+// get all ratings
+function getAllRatings() {
     global $pdo;
     $statement = $pdo->prepare('SELECT * FROM `rating` ORDER BY `id` DESC');
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// add rating
 function addRating($name, $email, $content, $stars) {
     global $pdo;
     $statement = $pdo->prepare('INSERT INTO `rating`(`name`, `email`, `content`, `stars`) VALUES (:name, :email, :content, :stars)');
@@ -221,6 +246,7 @@ function addRating($name, $email, $content, $stars) {
     return $statement->execute();
 }
 
+// delete rating
 function deleteRating($id) {
     global $pdo;
     $statement = $pdo->prepare('DELETE FROM `rating` WHERE `id` = :id');

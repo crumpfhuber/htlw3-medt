@@ -1,6 +1,6 @@
 <div class="row">
 <?php
-$news = getNews();
+$news = getAllNews();
 foreach ($news as $obj) { ?>
         <div class="col s12 m6">
             <div class="card">

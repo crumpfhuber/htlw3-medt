@@ -5,7 +5,7 @@ if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['ema
         addRating($_POST['firstname'] . " " . $_POST['lastname'], $_POST['email'], $_POST['textarea'], $_POST['stars']);
 }
 
-$ratings = getRatings(); ?>
+$ratings = getAllRatings(); ?>
 
 <div id="modal-rating" class="modal">
     <div class="modal-content">

@@ -1,12 +1,12 @@
 <?php
-session_start();
+session_start(); // start session if user will authenticate
 
-require_once 'settings.php';
-require_once 'database.php';
+require_once 'settings.php'; // include settings
+require_once 'database.php'; // include databse
 
-$page = isset($_GET['page']) ? $_GET['page'] : "home";
+$page = isset($_GET['page']) ? $_GET['page'] : "home"; // get page name; if not exists it will be `home`
 
-if (($page_name = $page_list[$page]) == NULL)
+if (($page_name = $page_list[$page]) == NULL) // if page not in list display error
     die("An error occurred. Please contact the webmaster!");
 ?>
 
@@ -31,7 +31,8 @@ if (($page_name = $page_list[$page]) == NULL)
 </head>
 <body>
 
-<?php if (isset($_SESSION['user_id'])) { ?>
+<?php // if user is authenticated print the admin dropdown
+if (isset($_SESSION['user_id'])) { ?>
     <ul id="admin-dropdown" class="dropdown-content">
         <li><a href="/admin-dashboard"><?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname']; ?></a></li>
         <li class="divider"></li>
@@ -56,7 +57,8 @@ if (($page_name = $page_list[$page]) == NULL)
             <li><a href="/download">Downloadbereich</a></li>
             <li><a href="/rating">Bewertungen</a></li>
             <li><a href="/contact">Kontaktanfrage</a></li>
-            <?php if (isset($_SESSION['user_id'])) { ?>
+            <?php // if user is authenticated print the navbar item
+            if (isset($_SESSION['user_id'])) { ?>
                 <li><a class="dropdown-trigger  red accent-1" href="#" data-target="admin-dropdown">Webmaster Bereich<i class="material-icons right">arrow_drop_down</i></a></li>
             <?php } ?>
         </ul>
@@ -64,11 +66,10 @@ if (($page_name = $page_list[$page]) == NULL)
 </nav>
 
 <div class="container">
-    <h3><?php echo $page_name; ?></h3>
+    <h3><?php echo $page_name; // print the page name as header ?></h3>
 
-    <?php include 'pages/' . $page . '.php'; ?>
+    <?php include 'pages/' . $page . '.php'; // include the requested file ?>
 </div>
-
 
 <footer class="page-footer blue lighten-1">
     <div class="container">
