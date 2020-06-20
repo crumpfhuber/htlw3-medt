@@ -33,12 +33,13 @@ if (($page_name = $page_list[$page]) == NULL)
 
 <?php if (isset($_SESSION['user_id'])) { ?>
     <ul id="admin-dropdown" class="dropdown-content">
-        <li><span><?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname']; ?></span></li>
+        <li><a href="/admin-dashboard"><?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname']; ?></a></li>
         <li class="divider"></li>
         <li><a href="/admin-files">Dateimanager</a></li>
         <li><a href="/admin-news">News</a></li>
         <li><a href="/admin-information">Informationsmaterial</a></li>
         <li><a href="/admin-download">Downloadbereich</a></li>
+        <li><a href="/admin-rating">Bewertungen</a></li>
         <li><a href="/admin-contact">Kontaktanfragen</a></li>
         <li class="divider"></li>
         <li><a href="/logout">Abmelden</a></li>

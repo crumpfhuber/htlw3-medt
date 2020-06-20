@@ -7,6 +7,7 @@ $page_list = array(
     "admin-files" => "Webmaster &middot; Dateimanager",
     "admin-information" => "Webmaster &middot; Informationsmaterial",
     "admin-news" => "Webmaster &middot; News",
+    "admin-rating" => "Webmaster &middot; Bewertungen",
     "contact" => "Kontaktanfrage",
     "download" => "Downloadbereich",
     "home" => "Willkommen",

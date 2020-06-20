@@ -189,8 +189,7 @@ function addDownloadDocument($file_id, $description) {
     $statement = $pdo->prepare('INSERT INTO `download`(`description`, `file`) VALUES (:description, :file)');
     $statement->bindParam(":description", $description);
     $statement->bindParam(":file", $file_id);
-    $statement->execute();
-    return $statement->fetch();
+    return $statement->execute();
 }
 
 function deleteDownloadDocument($doc_id) {
@@ -203,4 +202,28 @@ function deleteDownloadDocument($doc_id) {
     $statement->execute();
 
     deleteFile($document['file']); // delete file out of database
+}
+
+function getRatings() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT * FROM `rating` ORDER BY `id` DESC');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function addRating($name, $email, $content, $stars) {
+    global $pdo;
+    $statement = $pdo->prepare('INSERT INTO `rating`(`name`, `email`, `content`, `stars`) VALUES (:name, :email, :content, :stars)');
+    $statement->bindParam(":name", $name);
+    $statement->bindParam(":email", $email);
+    $statement->bindParam(":content", $content);
+    $statement->bindParam(":stars", $stars);
+    return $statement->execute();
+}
+
+function deleteRating($id) {
+    global $pdo;
+    $statement = $pdo->prepare('DELETE FROM `rating` WHERE `id` = :id');
+    $statement->bindParam(":id", $id);
+    return $statement->execute();
 }
