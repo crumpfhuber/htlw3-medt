@@ -1,4 +1,3 @@
-<!-- https://bootsnipp.com/materialize/snippets/zDopd -->
 <div class="slider">
     <ul class="slides">
         <li>
@@ -66,15 +65,17 @@
         </div>
     </div>
 
+    <div class="col xl12 l12 m12 s12" style="margin-top: 3vh; margin-bottom: 3vh;">
+        <video class="responsive-video" controls>
+            <source src="/file/tbhjvuoufgttghju" type="video/mp4">
+        </video>
+    </div>
+
     <div class="col xl12 l12 m12 s12">
         <div class="card-panel center blue">
           <span class="white-text">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.          </span>
         </div>
-    </div>
-
-    <div class="col xl12 l12 m12 s12" style="margin-top: 3vw;">
-        <iframe style="width: 100%; height: 60vh;" src="https://www.youtube.com/embed/mcixldqDIEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
