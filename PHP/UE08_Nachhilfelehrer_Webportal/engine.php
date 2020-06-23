@@ -97,7 +97,7 @@ if (isset($_SESSION['user_id'])) { ?>
 
 <nav>
     <div class="nav-wrapper blue lighten-1">
-        <a href="/home" class="brand-logo">logo</a>
+        <a href="/home" class="brand-logo" style="margin-left: 10px;">Nachhilfe Rumpfhuber</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/home">Startseite</a></li>
             <li><a href="/news">Aktuelles</a></li>
