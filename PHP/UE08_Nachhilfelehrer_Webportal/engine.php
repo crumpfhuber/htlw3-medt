@@ -1,33 +1,80 @@
 <?php
 session_start(); // start session if user will authenticate
 
+// disable error printing. it will printed in log file ... for security purpose
+ini_set("display_errors", 0);
+ini_set("display_startup_errors", 0);
+error_reporting(0);
+
 require_once 'settings.php'; // include settings
 require_once 'database.php'; // include databse
 
 $page = isset($_GET['page']) ? $_GET['page'] : "home"; // get page name; if not exists it will be `home`
 
-if (($page_name = $page_list[$page]) == NULL) // if page not in list display error
-    die("An error occurred. Please contact the webmaster!");
+if (!array_key_exists($page, $page_list)) { // if page not in list display 404 error
+    $_GET['error_code'] = 404;
+    include 'error.php'; // display 404 - not found
+    die();
+}
+
+if ($page_list[$page]['restricted'] && !isset($_SESSION['user_id'])) { // check if user has webmaster permissions
+    $_GET['error_code'] = 403;
+    include 'error.php'; // display 403 - forbidden
+    die();
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
+    <!-- charset meta tag -->
     <meta charset="UTF-8">
-    <title>Nachhilfe / <?php echo $page_name; ?></title>
 
+    <!-- page title -->
+    <title>Nachhilfe / <?php echo $page_list[$page]['name']; ?></title>
+
+    <!-- important meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<?php echo $page_list[$page]['description']; ?>">
+    <meta name="keywords" content="Nachhilfe, Rumpfhuber, Bildung, Schüler">
+    <meta name="author" content="Clemens Rumpfhuber">
 
+    <!-- geo meta tags -->
+    <meta name="DC.title" content="HTL Wels" />
+    <meta name="geo.region" content="AT-4" />
+    <meta name="geo.placename" content="Wels" />
+    <meta name="geo.position" content="48.157632;14.030404" />
+    <meta name="ICBM" content="48.157632, 14.030404" />
+
+    <!-- include jQuery (required for materialize.js) -->
     <script type="text/javascript" src="/assets/jquery.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- include materialize framework -->
+    <link href="/assets/materialize.min.css" rel="stylesheet">
+    <link href="/assets/material-icons.css" rel="stylesheet">
+    <script src="/assets/materialize.min.js"></script>
 
-    <script type="text/javascript" src="/assets/script.js"></script>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <!-- include own style sheet -->
     <link href="/assets/style.css" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -36,6 +83,7 @@ if (isset($_SESSION['user_id'])) { ?>
     <ul id="admin-dropdown" class="dropdown-content">
         <li><a href="/admin-dashboard"><?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname']; ?></a></li>
         <li class="divider"></li>
+        <li><a href="/admin-users">Benutzerverwaltung</a></li>
         <li><a href="/admin-files">Dateimanager</a></li>
         <li><a href="/admin-news">News</a></li>
         <li><a href="/admin-information">Informationsmaterial</a></li>
@@ -65,10 +113,12 @@ if (isset($_SESSION['user_id'])) { ?>
     </div>
 </nav>
 
-<div class="container">
-    <h3><?php echo $page_name; // print the page name as header ?></h3>
+<div class="container main-container">
+
+    <h3 class="center-align"><?php echo $page_list[$page]['name']; // print the page name as header ?></h3>
 
     <?php include 'pages/' . $page . '.php'; // include the requested file ?>
+
 </div>
 
 <footer class="page-footer blue lighten-1">
@@ -91,6 +141,7 @@ if (isset($_SESSION['user_id'])) { ?>
                     <li><a class="grey-text text-lighten-3" href="/map">Lageplan</a></li>
                     <li><a class="grey-text text-lighten-3" href="/imprint">Impressum</a></li>
                     <li><a class="grey-text text-lighten-3" href="/privacy">Datenschutzerklärung</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/sitemap">Sitemap</a></li>
                     <li><a class="grey-text text-lighten-3" href="/login">Anmelden</a></li>
                 </ul>
             </div>
@@ -103,6 +154,13 @@ if (isset($_SESSION['user_id'])) { ?>
         </div>
     </div>
 </footer>
+
+<script>
+    // initialise navbar dropdown
+    $( document ).ready(function() {
+        $(".dropdown-trigger").dropdown();
+    });
+</script>
 
 </body>
 </html>

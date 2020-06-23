@@ -1,19 +1,21 @@
 <?php
-if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site.");
+if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site."); // permission check
 
+// delete rating
 if (isset($_GET['delete'])) {
     deleteRating($_GET['delete']);
 }
 
+// get ratings from database
 $ratings = getAllRatings(); ?>
 
 <table class="highlight responsive-table">
     <thead>
     <tr>
-        <th style="width: 10vw;">Titel</th>
-        <th>Artikel</th>
-        <th style="width: 10vw;">Datum</th>
-        <th style="width: 10vw;">Author</th>
+        <th style="width: 10vw;">Name</th>
+        <th>Bewertung</th>
+        <th style="width: 12vw;">E-Mail</th>
+        <th style="width: 10vw;">Sterne</th>
         <th class="right"></th>
     </tr>
     </thead>
@@ -30,7 +32,7 @@ $ratings = getAllRatings(); ?>
                     echo '<i class="material-icons yellow-text">grade</i>';
                 ?>
             </td>
-            <td><a href="?delete=<?php echo $rating['id']; ?>"><i class="material-icons right">delete</i></a></td>
+            <td><a href="?delete=<?php echo $rating['id']; ?>"><i class="material-icons right red-text text-red-4">delete</i></a></td>
         </tr>
     <?php } ?>
     </tbody>

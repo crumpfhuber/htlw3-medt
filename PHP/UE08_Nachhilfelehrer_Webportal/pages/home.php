@@ -31,7 +31,6 @@
     </ul>
 </div>
 
-<!-- https://bootsnipp.com/materialize/snippets/klbxW -->
 <div class="row" style="margin-top: 3vh;">
     <div class="col xl12 l12 m12 s12">
         <div class="card-panel center teal">

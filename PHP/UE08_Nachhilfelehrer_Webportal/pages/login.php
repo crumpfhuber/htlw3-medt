@@ -1,13 +1,15 @@
 <?php
+// check for login
 if (isset($_POST['email']) && isset($_POST['password'])) {
-    $user = getUser($_POST['email']);
-    if (password_verify($_POST['password'], $user['password'])) {
+    $user = getUser($_POST['email']); // get user out of database
+    if (password_verify($_POST['password'], $user['password'])) { // check for correct password
+        // set session variables
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['firstname'] = $user['firstname'];
         $_SESSION['lastname'] = $user['lastname'];
     }
 }
-if (isset($_SESSION['user_id']))
+if (isset($_SESSION['user_id'])) // is user has session, redirect to admin lading page
     die('<meta http-equiv="refresh" content="0; URL=/admin-dashboard">');
 ?>
 

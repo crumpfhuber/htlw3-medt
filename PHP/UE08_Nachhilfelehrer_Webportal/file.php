@@ -3,8 +3,11 @@ require_once 'database.php';
 
 $file = getFile($_GET['page']); // get file from database
 
-if ($file == NULL)
-    die("An error occurred. Please contact the webmaster!");
+if ($file == NULL) {
+    $_GET['error_code'] = 404;
+    include 'error.php'; // display 404 - not found
+    die();
+}
 
 header('Content-Type: ' . $file['mime_type']); // set header with file type
 

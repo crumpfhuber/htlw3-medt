@@ -1,11 +1,13 @@
 <?php
 
+// add rating
 if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['textarea']) && isset($_POST['stars'])) {
     if ($_POST['stars'] > 0 && $_POST['stars'] <= 5)
         addRating($_POST['firstname'] . " " . $_POST['lastname'], $_POST['email'], $_POST['textarea'], $_POST['stars']);
 }
 
-$ratings = getAllRatings(); ?>
+$ratings = getAllRatings(); // get ratings from database
+?>
 
 <div id="modal-rating" class="modal">
     <div class="modal-content">
@@ -45,8 +47,6 @@ $ratings = getAllRatings(); ?>
                     </select>
                     <label for="stars">Sterne</label>
                 </div>
-
-
             </div>
 
             <button class="btn waves-effect waves-light" type="submit" name="action">Absenden
@@ -81,8 +81,8 @@ $ratings = getAllRatings(); ?>
 <script>
     (function ($) {
         $(function () {
-            $('.modal').modal();
-            $('select').formSelect();
+            $('.modal').modal(); // initialize all modals
+            $('select').formSelect(); // initialize select
         });
     })(jQuery);
 </script>

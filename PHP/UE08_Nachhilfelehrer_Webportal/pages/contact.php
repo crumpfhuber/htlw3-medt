@@ -1,7 +1,8 @@
 <?php
+// add contact request
 if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['textarea'])) {
     $file = NULL;
-    if (isset($_FILES['file']) && $_FILES['file']['tmp_name'] != "")
+    if (isset($_FILES['file']) && $_FILES['file']['tmp_name'] != "") // if file is set, upload it and attach sid to contact request
         $file = addFile($_FILES['file']['name'], $_FILES['file']['type'], file_get_contents($_FILES['file']['tmp_name']), "Uploaded via Contact Form");
     addContactRequest($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['textarea'], $file);
     echo '<script>  M.toast({html: \'Das Formular wurde erfolgreich abgesendet. Vielen Dank!\'})</script>';

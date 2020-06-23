@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /home/
+Allow: /news
+Allow: /information
+Allow: /download
+Allow: /rating
+Allow: /contact
+Allow: /map
+Allow: /imprint
+Allow: /privacy
+Allow: /sitemap
+Disallow: /admin*
+Disallow: /login
+Disallow: /logout
+Disallow: /file/*

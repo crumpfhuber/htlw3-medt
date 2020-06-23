@@ -1,5 +1,5 @@
 <?php
-if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site.");
+if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site."); // permission check
 
 ?>
 

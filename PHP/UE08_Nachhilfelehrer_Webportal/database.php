@@ -130,6 +130,34 @@ function deleteContactRequest($request_id) {
     return $statement->execute();
 }
 
+// get all users without password attribute
+function getAllUsers() {
+    global $pdo;
+    $statement = $pdo->prepare('SELECT `id`, `firstname`, `lastname`, `email` FROM `user`');
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// delete user by id
+function deleteUser($user_id) {
+    global $pdo;
+    $statement = $pdo->prepare('DELETE FROM `user` WHERE `id` = :id');
+    $statement->bindParam(":id", $user_id);
+    return $statement->execute();
+}
+
+// add user
+function addUser($firstname, $lastname, $email, $password) {
+    global $pdo;
+    $password = password_hash($password, PASSWORD_ARGON2ID);
+    $statement = $pdo->prepare('INSERT INTO `user`(`firstname`, `lastname`, `email`, `password`) VALUES (:firstname, :lastname, :email, :password)');
+    $statement->bindParam(":firstname", $firstname);
+    $statement->bindParam(":lastname", $lastname);
+    $statement->bindParam(":email", $email);
+    $statement->bindParam(":password", $password);
+    return $statement->execute();
+}
+
 // get user by email
 function getUser($email) {
     global $pdo;
@@ -191,7 +219,7 @@ function addInformationDocument($file_id, $description) {
 // get all download documents
 function getAllDownloadDocuments() {
     global $pdo;
-    $statement = $pdo->prepare('SELECT * FROM `download`');
+    $statement = $pdo->prepare('SELECT `download`.*, `file`.`mime_type` FROM `download` INNER JOIN `file` ON (`download`.`file` = `file`.`sid`)');
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }

@@ -1,4 +1,4 @@
 <?php
-session_destroy();
+session_destroy(); // destory existing session => logout
 
-die('<meta http-equiv="refresh" content="0; URL=/home">');
+die('<meta http-equiv="refresh" content="0; URL=/home">'); // redirect to home page

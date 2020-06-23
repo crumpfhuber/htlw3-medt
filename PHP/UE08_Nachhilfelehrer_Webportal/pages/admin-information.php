@@ -1,17 +1,20 @@
 <?php
-if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site.");
+if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site."); // permission check
 
+// add file and information document
 if (isset($_FILES['file']) && isset($_POST['description'])) {
     $file = addFile($_FILES['file']['name'], $_FILES['file']['type'], file_get_contents($_FILES['file']['tmp_name']), "Uploaded via Information CP");
     addInformationDocument($file, $_POST['description']);
     echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich hinzugefügt!\'})</script>';
 }
 
+// delete information document
 if (isset($_GET['delete'])) {
     deleteInformationDocument($_GET['delete']);
     echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
+// get documents from database
 $docs = getAllInformationDocuments(); ?>
 
 <div id="modal-upload" class="modal">
@@ -60,7 +63,7 @@ $docs = getAllInformationDocuments(); ?>
         <tr>
             <td><a href="/file/<?php echo $doc['file']; ?>"><?php echo $doc['file']; ?></a></td>
             <td><?php echo $doc['description']; ?></td>
-            <td><a href="?delete=<?php echo $doc['id']; ?>"><i class="material-icons right">delete</i></a></td>
+            <td><a href="?delete=<?php echo $doc['id']; ?>"><i class="material-icons right red-text text-red-4">delete</i></a></td>
         </tr>
     <?php } ?>
     </tbody>
@@ -69,7 +72,7 @@ $docs = getAllInformationDocuments(); ?>
 <script>
     (function ($) {
         $(function () {
-            $('.modal').modal();
+            $('.modal').modal(); // initialize all modals
         });
     })(jQuery);
 </script>

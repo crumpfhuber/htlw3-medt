@@ -1,17 +1,20 @@
 <?php
-if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site.");
+if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site."); // permission check
 
+// add file and download document
 if (isset($_FILES['file']) && isset($_POST['description'])) {
     $file = addFile($_FILES['file']['name'], $_FILES['file']['type'], file_get_contents($_FILES['file']['tmp_name']), "Uploaded via Download CP");
     addDownloadDocument($file, $_POST['description']);
     echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich hinzugefügt!\'})</script>';
 }
 
+// delete download document
 if (isset($_GET['delete'])) {
     deleteDownloadDocument($_GET['delete']);
     echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
+// get documents from database
 $docs = getAllDownloadDocuments(); ?>
 
 <div id="modal-upload" class="modal">
@@ -52,6 +55,7 @@ $docs = getAllDownloadDocuments(); ?>
     <tr>
         <th>Datei URL</th>
         <th>Beschreibung</th>
+        <th>Mime Type</th>
         <th class="right"></th>
     </tr>
     </thead>
@@ -60,7 +64,8 @@ $docs = getAllDownloadDocuments(); ?>
         <tr>
             <td><a href="/file/<?php echo $doc['file']; ?>"><?php echo $doc['file']; ?></a></td>
             <td><?php echo $doc['description']; ?></td>
-            <td><a href="?delete=<?php echo $doc['id']; ?>"><i class="material-icons right">delete</i></a></td>
+            <td><?php echo $doc['mime_type']; ?></td>
+            <td><a href="?delete=<?php echo $doc['id']; ?>"><i class="material-icons right red-text text-red-4">delete</i></a></td>
         </tr>
     <?php } ?>
     </tbody>
@@ -69,7 +74,7 @@ $docs = getAllDownloadDocuments(); ?>
 <script>
     (function ($) {
         $(function () {
-            $('.modal').modal();
+            $('.modal').modal(); // initialize all modals
         });
     })(jQuery);
 </script>

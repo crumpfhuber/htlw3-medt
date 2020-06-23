@@ -1,11 +1,13 @@
 <?php
-if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site.");
+if (!isset($_SESSION['user_id'])) die("You have no permissions to access this site."); // permission check
 
+// delete contact request
 if (isset($_GET['delete'])) {
     deleteContactRequest($_GET['delete']);
     echo '<script>  M.toast({html: \'Der Eintrag wurde erfolgreich gelöscht!\'})</script>';
 }
 
+// get contact requests from database
 $requests = getContactRequests(); ?>
 
 <table class="highlight responsive-table" xmlns:mailto="http://www.w3.org/1999/xhtml">
@@ -45,7 +47,7 @@ $requests = getContactRequests(); ?>
 <script>
     (function ($) {
         $(function () {
-            $('.modal').modal(); //initialize all modals
+            $('.modal').modal(); // initialize all modals
         });
     })(jQuery);
 </script>
