@@ -1,5 +1,5 @@
 FROM debian:latest
-MAINTAINER Clemens Rumpfhuber <mail@clemens-rumpfhuber>
+MAINTAINER Clemens Rumpfhuber <mail@clemens-rumpfhuber.at>
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get -y install lsb-release apt-transport-https ca-certificates wget
